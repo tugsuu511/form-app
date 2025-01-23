@@ -18,7 +18,7 @@ const MultiStepForm = () => {
   });
   const [formError, setFormError] = useState({
     firstName: "",
-    lasName: "",
+    lastName: "",
     userName: "",
     email: "",
     phoneNumber: "",
