@@ -2,7 +2,6 @@ import React from "react";
 import PineconeLogo from "@/app/icons/PineconeLogo";
 import Chevron from "@/app/icons/Chevron";
 import { isStepOneValid } from "../utils/stepOneValidation";
-import Input from "@/app/components/Input";
 
 const StepOne = (props) => {
   const {
