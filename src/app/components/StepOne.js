@@ -45,9 +45,10 @@ const StepOne = (props) => {
             </div>
             <input
               name={"firstName"}
+              value={formValue.firstName || ""} 
               className={`${
                 errors.firstName.length > 0 ? "" : ""
-              },"w-full p-[12px] border"`}
+              },"w-full p-[12px] border border`}
               placeholder="Your first name"
               onChange={handleChange}
             ></input>
@@ -62,9 +63,10 @@ const StepOne = (props) => {
             </div>
             <input
               name={"lastName"}
+              value={formValue.lastName || ""} 
               className={`${
                 errors.lastName.length > 0 ? "" : ""
-              },"w-full p-[12px] border"`}
+              },"w-full p-[12px] border border"`}
               placeholder="Your last name"
               onChange={handleChange}
             ></input>
@@ -79,9 +81,10 @@ const StepOne = (props) => {
             </div>
             <input
               name={"userName"}
+              value={formValue.userName || ""} 
               className={`${
                 errors.userName.length > 0 ? "" : ""
-              },"w-full p-[12px] border"`}
+              },"w-full p-[12px] border border"`}
               placeholder="Your user name"
               onChange={handleChange}
             ></input>
