@@ -97,7 +97,7 @@ const StepThree = (props) => {
                 <img
                   src={selectedImg}
                   alt="Profile preview"
-                  className="mt-2 w-[100px] h-[100px] object-cover"
+                  className="mt-2 w-full h-[220px] object-cover"
                 />
               )}  
           </div>
