@@ -6,6 +6,7 @@ import StepOne from "@/app/components/StepOne";
 import StepTwo from "@/app/components/StepTwo";
 import StepThree from "@/app/components/StepThree";
 import FormFinished from "@/app/components/FormFinished";
+import { AnimatePresence, motion } from "framer-motion";
 
 const MultiStepForm = () => {
   const [currentStep, setCurrentStep] = useState(0);
@@ -48,18 +49,37 @@ const MultiStepForm = () => {
     }
   };
 
+  const animationVariants = {
+    enter: {opacity:0 , x:100},
+    center: {opacity:1 , x:0},
+    exit: {opacity:0, x:-100},
+
+  }
+
   return (
+    <AnimatePresence>
+      <motion.dev
+      key={currentStep}
+      initial="enter"
+      animate="center"
+      exit="exit"
+      variants={animationVariants}
+      transition={{duration: 0.5}}
+      >
     <div>
       <Step
         errors={formError}
         formValue={formValue}
-        clearError={clearError}
+        clearError={clearError} 
         handleError={handleError}
         setFormValue={setFormValue}
         handleNextStep={handleNextStep}
         handleBackStep={handleBackStep}
       />
     </div>
+    </motion.dev>
+    </AnimatePresence>
+    
   );
 };
 
