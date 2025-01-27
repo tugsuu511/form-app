@@ -1,7 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
-
+import  { useState } from "react";
 import StepOne from "@/app/components/StepOne";
 import StepTwo from "@/app/components/StepTwo";
 import StepThree from "@/app/components/StepThree";
@@ -50,36 +49,32 @@ const MultiStepForm = () => {
   };
 
   const animationVariants = {
-    enter: {opacity:0 , x:100},
-    center: {opacity:1 , x:0},
-    exit: {opacity:0, x:-100},
-
-  }
+    enter: { opacity: 0, x: 100 },
+    center: { opacity: 1, x: 0 },
+    exit: { opacity: 0, x: -100 },
+  };
 
   return (
-    <AnimatePresence>
-      <motion.dev
-      key={currentStep}
-      initial="enter"
-      animate="center"
-      exit="exit"
-      variants={animationVariants}
-      transition={{duration: 0.5}}
+    <AnimatePresence mode="wait">
+      <motion.div
+        key={currentStep}
+        initial="enter"
+        animate="center"
+        exit="exit"
+        variants={animationVariants}
+        transition={{ duration: 0.5 }}
       >
-    <div>
-      <Step
-        errors={formError}
-        formValue={formValue}
-        clearError={clearError} 
-        handleError={handleError}
-        setFormValue={setFormValue}
-        handleNextStep={handleNextStep}
-        handleBackStep={handleBackStep}
-      />
-    </div>
-    </motion.dev>
+        <Step
+          errors={formError}
+          formValue={formValue}
+          clearError={clearError}
+          handleError={handleError}
+          setFormValue={setFormValue}
+          handleNextStep={handleNextStep}
+          handleBackStep={handleBackStep}
+        />
+      </motion.div>
     </AnimatePresence>
-    
   );
 };
 

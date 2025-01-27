@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import PineconeLogo from "@/app/icons/PineconeLogo";
 import Chevron from "@/app/icons/Chevron";
 import ChevronLeft from "@/app/icons/ChevronLeft";

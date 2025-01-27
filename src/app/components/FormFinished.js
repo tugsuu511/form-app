@@ -1,5 +1,5 @@
-import React from "react";
 import PineconeLogo from "@/app/icons/PineconeLogo";
+
 const FormFinished = () => {
   return (
     <div className="flex flex-col gap-2 p-[32px] bg-white rounded-lg">

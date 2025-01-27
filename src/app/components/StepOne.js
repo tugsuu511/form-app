@@ -1,4 +1,3 @@
-import React from "react";
 import PineconeLogo from "@/app/icons/PineconeLogo";
 import Chevron from "@/app/icons/Chevron";
 import { isStepOneValid } from "../utils/stepOneValidation";

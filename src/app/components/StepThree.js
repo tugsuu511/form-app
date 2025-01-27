@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import PineconeLogo from "@/app/icons/PineconeLogo";
 import Chevron from "@/app/icons/Chevron";
 import ChevronLeft from "@/app/icons/ChevronLeft";
 import { isStepThreeValid } from "../utils/stepThreeValidation";
+import Image from "next/image";
 
 const StepThree = (props) => {
   const {
@@ -94,7 +95,7 @@ const StepThree = (props) => {
             )}
 
               {selectedImg && (
-                <img
+                <Image
                   src={selectedImg}
                   alt="Profile preview"
                   className="mt-2 w-full h-[220px] object-cover"
